@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block content %}
+<h1>"Welcome In Home"</h1>
+
+<style>
+    .home-container{
+    display:grid;
+    grid-template-columns:1fr 3fr 1fr;
+    }
+</style>
+
+<div class="home-container">
+    <div>
+        {% include 'base/topics.html' %}
+    </div>
+
+    <div>
+      {% include 'base/feed.html' %}
+    </div>
+
+    <div>
+        {% include 'base/activitycomp.html' %}
+    </div>
+
+
+</div>
+
+<div>
+<br>
+</div>
+<h1><a href="{% url 'create_room' %}"> Create Room </a></h1>
+
+{% endblock content %}
